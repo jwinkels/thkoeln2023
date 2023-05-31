@@ -1,0 +1,43 @@
+GET    http://localhost:8080/referees
+
+
+
+POST   http://localhost:8080/referee
+{
+    "id": null,
+    "firstName":"Jan",
+    "lastName":"Winkels"
+}
+
+
+
+GET http://localhost:8080/event
+
+
+PUT http://localhost:8080/event
+{
+    "id": 1,
+    "home": "SVH",
+    "guest": "THB",
+    "scoreHome": 0,
+    "scoreGuest": 0,
+    "kickoff": "2023-05-29 13:00:00",
+    "ref": Copy from 1st call
+}
+
+
+PUT http://localhost:8080/event/1/scored
+{"team": "anybody"}
+
+
+POST http://localhost:8080/event
+{
+    "id": null,
+    "home": "BSV",
+    "guest": "FCW",
+    "kickoff": "2023-06-01 10:30:00",
+    "ref": null
+}
+
+
+GET http://localhost:8080/events/noref
